@@ -10,10 +10,10 @@ def MovingMedian(nums):
   if k > length:
     k = length
   ans = []
+
+  sum = 0
   for i in range(1, k):
-    sum = 0
-    for j in range(0, i):
-      sum = sum + nums[j]
+    sum = sum + nums[i - 1]
     ans.append(str(int(sum / i)))
 
   window = sorted(nums[0:k])
@@ -27,4 +27,4 @@ def MovingMedian(nums):
   return res.join(ans)
 
 # keep this function call here
-print(MovingMedian([3, 1, 3, 5, 10, 6, 4, 3, 1]))
+print(MovingMedian([5,2,4,6]))
