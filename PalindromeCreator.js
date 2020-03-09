@@ -17,14 +17,15 @@ function PalindromeCreator (str) {
     // str minus 1 char:
     let temp1 = str.slice(0, i)
     let temp2 = str.slice(i + 1)
-    let removedLetter = str[i]
-    console.log(removedLetter + '\n' + 'part 1:  ' + temp1, '\npart 2:  ' + temp2 + '\n')
+    // let removedLetter = str[i]
+    // console.log(removedLetter + '\n' + 'part 1:  ' + temp1, '\npart 2:  ' + temp2 + '\n')
     let tempStr = temp1 + temp2
 
+    console.log(temp1, temp2, tempStr)
     if (isPalindrome(tempStr)) {
       return str[i]
     }
   }
 }
 
-PalindromeCreator('abjchba')
+console.log(PalindromeCreator('kjjjhjjj'))
